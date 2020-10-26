@@ -17,6 +17,6 @@ print("medida de lado 2 del rectángulo")
 l2 = float(input())
 
 #desplegar calculo funcion1
-
+rikodelicioso
 #desplegar calculo funcion 2
 
