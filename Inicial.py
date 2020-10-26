@@ -3,7 +3,9 @@
 #proposito del programa
 
 #funcion1  calcular área del rectángulo
-
+def Perimetro():
+    Per = 2*l1+2*l2
+    print("El perimetro de la figura es de", Per)
 
 #funcion2  calcular perímetro del rectángulo
 
@@ -17,6 +19,5 @@ print("medida de lado 2 del rectángulo")
 l2 = float(input())
 
 #desplegar calculo funcion1
-rikodelicioso
+Perimetro()
 #desplegar calculo funcion 2
-hyhyhyhyhyhyhyhy
