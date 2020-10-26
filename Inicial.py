@@ -19,4 +19,4 @@ l2 = float(input())
 #desplegar calculo funcion1
 rikodelicioso
 #desplegar calculo funcion 2
-
+hyhyhyhyhyhyhyhy
