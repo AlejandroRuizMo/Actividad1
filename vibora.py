@@ -13,10 +13,11 @@ def change(x, y): #cambio de direccion de la vibora
     "Change snake direction."
     aim.x = x
     aim.y = y
-    if aim.x or aim.y:
+    if aim.x or aim.y: #este if hace que cuando se cambie de dirección, la comida cambie de posición aleatoriamente
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
-def inside(head):
+
+def inside(head): #mantiene a las serpiente dentro del plano
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
 
