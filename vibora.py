@@ -6,7 +6,7 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
-def change(x, y):
+def change(x, y): #cambio de direccion de la vibora
     "Change snake direction."
     aim.x = x
     aim.y = y
@@ -17,19 +17,19 @@ def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
 
-def move():
+def move(): #movimiento de la vibora
     "Move snake forward one segment."
     head = snake[-1].copy()
     head.move(aim)
 
-    if not inside(head) or head in snake:
+    if not inside(head) or head in snake: #que pasa si la vibora se sale del borde o toca su cuerpo
         square(head.x, head.y, 9, 'red')
         update()
         return
 
     snake.append(head)
 
-    if head == food:
+    if head == food: #que pasa si la cabeza de la vibora toca la comida
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
@@ -38,10 +38,10 @@ def move():
 
     clear()
 
-    for body in snake:
+    for body in snake: #cuerpo de la vibora 
         square(body.x, body.y, 9, 'black')
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, 'green') #comida de la vibora
     update()
     ontimer(move, 100)
 
