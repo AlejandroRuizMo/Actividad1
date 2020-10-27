@@ -21,7 +21,7 @@ def square(start, end): #esta función dibuja un cuadrado basandose en las coord
 
     end_fill() #Aqui llena los espacios encerrados
 
-def circle(start, end):
+def circle(start, end): #esta función es parecida a al del cuadrado, traza varios cuadrados rotados en difetentes angulos en la misma posición de X y Y considerando el primer punto de origen y el segundo como el lago que tambien es el equivalente al diametro del circulo
     "Draw circle from start to end."
     up()
     goto(start.x, start.y)
