@@ -13,7 +13,9 @@ def change(x, y): #cambio de direccion de la vibora
     "Change snake direction."
     aim.x = x
     aim.y = y
-
+    if aim.x or aim.y:
+        food.x = randrange(-15, 15) * 10
+        food.y = randrange(-15, 15) * 10
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
