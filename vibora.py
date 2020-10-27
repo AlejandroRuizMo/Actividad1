@@ -2,9 +2,9 @@ from turtle import *
 from random import randrange
 import random
 from freegames import square, vector
-color = ['blue', 'green', 'yellow', 'black']
-c1 = random.choice(color)
-c2 = random.choice(color)
+color = ['blue', 'green', 'yellow', 'black'] #colores a elegir
+c1 = random.choice(color) #color 1 elegido al azar
+c2 = random.choice(color) #color 2 elegido al azar
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
@@ -43,9 +43,9 @@ def move(): #movimiento de la vibora
     clear()
 
     for body in snake: #cuerpo de la vibora 
-        square(body.x, body.y, 9, c1)
-
-    square(food.x, food.y, 9, c2) #comida de la vibora
+        square(body.x, body.y, 9, c1) #reemplazamos el parametro del color por la variable con el color elegido al azar
+#comida de la vibora
+    square(food.x, food.y, 9, c2) #reemplazamos el parametro del color por la variable con el color elegido al azar
     update()
     ontimer(move, 100)
 
