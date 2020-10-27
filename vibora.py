@@ -21,19 +21,22 @@ def inside(head): #mantiene a las serpiente dentro del plano
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
 
-def move(): #movimiento de la vibora
+#movimiento de la vibora
+def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
     head.move(aim)
 
-    if not inside(head) or head in snake: #que pasa si la vibora se sale del borde o toca su cuerpo
+    #que pasa si la vibora se sale del borde o toca su cuerpo
+    if not inside(head) or head in snake: 
         square(head.x, head.y, 9, 'red')
         update()
         return
 
     snake.append(head)
 
-    if head == food: #que pasa si la cabeza de la vibora toca la comida
+    #que pasa si la cabeza de la vibora toca la comida
+    if head == food: 
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
@@ -42,10 +45,13 @@ def move(): #movimiento de la vibora
 
     clear()
 
-    for body in snake: #cuerpo de la vibora 
-        square(body.x, body.y, 9, c1) #reemplazamos el parametro del color por la variable con el color elegido al azar
-#comida de la vibora
-    square(food.x, food.y, 9, c2) #reemplazamos el parametro del color por la variable con el color elegido al azar
+    #cuerpo de la vibora
+    for body in snake:  
+        #reemplazamos el parametro del color por la variable con el color elegido al azar
+        square(body.x, body.y, 9, c1) 
+    #comida de la vibora
+    #reemplazamos el parametro del color por la variable con el color elegido al azar
+    square(food.x, food.y, 9, c2) 
     update()
     ontimer(move, 100)
 
