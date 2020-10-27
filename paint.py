@@ -31,7 +31,7 @@ def circle(start, end):
 
     for count in range(40):
         forward(end.x - start.x)
-        left(90)
+        left(91)
         for count in range(1):
             forward(end.x - start.x)
             left(80)
