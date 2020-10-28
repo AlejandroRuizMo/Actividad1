@@ -5,9 +5,11 @@ from freegames import floor, vector
 state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
+
 #El vector aim nos da la velocidad y dirección inicial de nuestro pacman
 aim = vector(10, 0)
 pacman = vector(-40, -80)
+
 #El conjunto de vectores ghostos, determinan la posición, velocidad y dirección de los fantasmas
 ghosts = [
     [vector(-180, 160), vector(10, 0)],
@@ -15,6 +17,8 @@ ghosts = [
     [vector(100, 160), vector(0, -10)],
     [vector(100, -160), vector(-10, 0)],
 ]
+
+#Este vector "tiles" representa el mapa del juego, los 1 es el camino que puede ser recorrido por pacman o los fantasmas y los 0 son bordes.
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
