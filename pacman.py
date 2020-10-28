@@ -130,6 +130,7 @@ def move():
                 vector(0, 10),
                 vector(0, -10),
             ]
+            #Esta siguiente parte determina la siguiente dirección de los fantasmas utilizando la función choice, es decir aleatoriamente
             plan = choice(options)
             course.x = plan.x
             course.y = plan.y
