@@ -96,7 +96,7 @@ def world():
             x = (index % 20) * 20 - 200
             y = 180 - (index // 20) * 20
             square(x, y)
-
+#puntos del pacman
             if tile == 1:
                 path.up()
                 path.goto(x + 10, y + 10)
