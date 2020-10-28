@@ -1,3 +1,10 @@
+#Alejandro Ruiz A01177251
+#Luis García A01733800
+#28 de octube del 2020
+
+#El propósito de este código es modificar un poco el juego de Pac-Man a nuestro gusto para agregarla dificultad o facilidad
+#En nuestro caso, le agregamos dificultad al hacer fantasmas inteligentes y agregarles velocidad
+
 from random import choice
 from turtle import *
 from freegames import floor, vector
@@ -7,7 +14,7 @@ path = Turtle(visible=False)
 writer = Turtle(visible=False)
 
 #El vector aim nos da la velocidad y dirección inicial de nuestro pacman
-aim = vector(10, 0)
+aim = vector(5, 0)
 pacman = vector(-40, -80)
 
 #El conjunto de vectores ghostos, determinan la posición, velocidad y dirección de los fantasmas
@@ -123,9 +130,10 @@ def move():
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
+            
             #Si pacman cambia de dirección, los fantasmas cambiaran tambien en la misma
             if valid(pacman + aim):
-                plan = aim
+                plan = 2*aim #Se multiplica x2 porque los fantasmas tienen el doble de velocidad que pacman
                 course.x = plan.x
                 course.y = plan.y
             
@@ -176,10 +184,10 @@ writer.color('white')
 writer.write(state['score'])
 listen()
 #Estos vectores harán que cambie su velocidad, por ende mientras mayor el valor del vector, más rapido se movera
-onkey(lambda: change(10, 0), 'Right')
-onkey(lambda: change(-10, 0), 'Left')
-onkey(lambda: change(0, 10), 'Up')
-onkey(lambda: change(0, -10), 'Down')
+onkey(lambda: change(5, 0), 'Right')
+onkey(lambda: change(-5, 0), 'Left')
+onkey(lambda: change(0, 5), 'Up')
+onkey(lambda: change(0, -5), 'Down')
 world()
 move()
 done()
