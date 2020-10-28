@@ -115,6 +115,8 @@ def move():
 
     up()
     goto(pacman.x + 10, pacman.y + 10)
+    
+    #Tamaño y color del pac-man
     dot(20, 'yellow')
 
     for point, course in ghosts:
@@ -134,6 +136,8 @@ def move():
 
         up()
         goto(point.x + 10, point.y + 10)
+        
+        #tamaño y color del fantasma
         dot(20, 'red')
 
     update()
