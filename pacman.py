@@ -183,7 +183,7 @@ writer.goto(160, 160)
 writer.color('white')
 writer.write(state['score'])
 listen()
-#Estos vectores harán que cambie su velocidad, por ende mientras mayor el valor del vector, más rapido se movera
+#Estos vectores harán que cambie su velocidad (pacman), por ende mientras mayor el valor del vector, más rapido se movera
 onkey(lambda: change(5, 0), 'Right')
 onkey(lambda: change(-5, 0), 'Left')
 onkey(lambda: change(0, 5), 'Up')
