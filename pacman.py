@@ -123,6 +123,12 @@ def move():
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
+            #Si pacman cambia de dirección, los fantasmas cambiaran tambien en la misma
+            if valid(pacman + aim):
+                plan = aim
+                course.x = plan.x
+                course.y = plan.y
+            
         else:
             #Estos son los vectores que determinan la
             #dirección y velocidad de los fantasmas cuando
