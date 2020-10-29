@@ -65,7 +65,8 @@ def move(): #descripción del movimiento de la bola
     targets.clear()
 
     for target in dupe: #como eliminar objetivos
-        if abs(target - ball) > 13:
+        #Esto se saca restando el tamaño de la bola al tamaño del target para que cada vez que esta distancia sean menor a esto, se desaparezca el target
+        if abs(target - ball) > 14:
             targets.append(target)
 
     draw()
