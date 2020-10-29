@@ -1,3 +1,15 @@
+#Alejandro Ruiz A01177251
+#Luis García A01733800
+#29 de octube del 2020
+
+#proposito del codigo
+#modificar un codigo ya hecho de forma que la velocidad
+#en objetivos y la bola que se lanza sea más rápido
+#y también que el juego sea infinito o que nunca termine
+#aunque los objetivos a eliminar lleguen al otro lado de
+#la pantalla
+
+
 from random import randrange
 from turtle import *
 from freegames import vector
