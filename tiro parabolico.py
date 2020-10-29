@@ -50,12 +50,12 @@ def draw():#acción del juego
 def move(): #descripción del movimiento de la bola
     "Move ball and targets."
     if randrange(40) == 0:
-        y = randrange(-150, 150)
-        target = vector(200, y)
+        y = randrange(-150, 150) #rango donde aparecen los targets
+        target = vector(200, y) 
         targets.append(target)
 
-    for target in targets:
-        target.x -= 0.5
+    for target in targets: #Velocidad de los targets
+        target.x -=  2
 
     if inside(ball):
         speed.y -= 0.35 #Desaceleración en el Eje Y
