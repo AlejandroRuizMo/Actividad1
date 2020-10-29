@@ -13,8 +13,9 @@ def tap(x, y): #accion de tocar la pantalla marcando
         #la bola sera lanzada fuera del area de juego
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        #Mientras menor sea el número por el que se divide, mayor será la velocidad
+        speed.x = (x + 200) / 20 
+        speed.y = (y + 200) / 20
 
 def inside(xy): #marca el rango del juego
     "Return True if xy within screen."
@@ -45,7 +46,7 @@ def move(): #descripción del movimiento de la bola
         target.x -= 0.5
 
     if inside(ball):
-        speed.y -= 0.35 #VELOCIDAD DE LA BOLA A LANZAR
+        speed.y -= 0.35 #Desaceleración en el Eje Y
         ball.move(speed)
 
     dupe = targets.copy()
