@@ -2,7 +2,7 @@ from random import randrange
 from turtle import *
 from freegames import vector
 
-ball = vector(-200, -200)
+ball = vector(-200, -200) #desde donde se tira la bola
 speed = vector(0, 0)
 targets = []
 
@@ -54,10 +54,6 @@ def move():
             targets.append(target)
 
     draw()
-
-    for target in targets:
-        if not inside(target):
-            return
 
     ontimer(move, 50)
 
