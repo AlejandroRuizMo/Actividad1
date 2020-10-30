@@ -58,7 +58,7 @@ def draw():
         x, y = xy(mark)
         up()
         #Coordenedas donde aparecera el número, el origen es la esquina inferior izquierda
-        goto(x+12,y+2)
+        goto(x+10,y+2)
         #Color de letra
         color('black')
         #Tipografía y tamaño
