@@ -1,3 +1,10 @@
+#Alejandro Ruiz A01177251
+#Luis García A01733800
+#30 de octubre del 2020
+#Este codigo cuando se corre, genera un juego de memorama. Nuestro objetivo es comprender el codigo a tal punto
+#que podamos hacer cambios a nuestro gusto. En este caso, decidimos cambiar la sombología de las cartas de números
+#a letras, el tamaño de estas y que estén más centradas en las casillas, que nos avise cuando terminemos y que nos regrese el número de taps que realizamos.
+
 from random import *
 from turtle import *
 from freegames import path
@@ -18,6 +25,7 @@ def square(x, y):
     down()
     color('black', 'white')
     begin_fill()
+    #Aqui podemos obtener tamaño de las casillas justo para nuestro juego, para que quepan las casillas y cubran la imagen
     for count in range(4):
         forward(50)
         left(90)
@@ -25,6 +33,7 @@ def square(x, y):
 
 def index(x, y):
     "Convert (x, y) coordinates to tiles index."
+    #Donde se pique en el tablero, se ajusta para que seleccione la casilla correspondiente
     return int((x + 200) // 50 + ((y + 200) // 50) * 8)
 
 def xy(count):
