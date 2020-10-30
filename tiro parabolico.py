@@ -9,7 +9,7 @@
 #aunque los objetivos a eliminar lleguen al otro lado de
 #la pantalla
 
-
+#comentario
 from random import randrange
 from turtle import *
 from freegames import vector
