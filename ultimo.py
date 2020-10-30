@@ -104,4 +104,5 @@ tracer(False)
 onscreenclick(tap)
 draw()
 done()
+#Cuando se cierren las ventanas, se imprime 'Taps' con su respectivo número, no importa si se acabo el juego o no
 print(Taps)
