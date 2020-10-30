@@ -81,9 +81,7 @@ def draw():
         write(tiles[mark], font=('Arial', 20, 'normal'))
 
     update()
-    ontimer(draw, 100)
-
-def end():
+    
     end=True
     for a in hide:
         if a==True:
@@ -92,6 +90,10 @@ def end():
     if end:
         print('fin del juego')
         return
+    
+    ontimer(draw, 100)
+
+
 shuffle(tiles)
 setup(420, 420, 370, 0)
 addshape(car)
