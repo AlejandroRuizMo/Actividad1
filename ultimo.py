@@ -81,6 +81,15 @@ def draw():
     update()
     ontimer(draw, 100)
 
+def end():
+    end=True
+    for a in hide:
+        if a==True:
+            end=False
+            break
+    if end:
+        print('fin del juego')
+        return
 shuffle(tiles)
 setup(420, 420, 370, 0)
 addshape(car)
@@ -88,5 +97,6 @@ hideturtle()
 tracer(False)
 onscreenclick(tap)
 draw()
+end()
 done()
 print(Taps)
