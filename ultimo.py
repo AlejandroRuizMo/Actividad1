@@ -82,6 +82,8 @@ def draw():
 
     update()
     
+    #Esta siguiente linea de codigos, lo que hace es que al ya no haber mas casillas escondidas, se imprimen las palabras
+    #El juego ha terminado
     end=True
     for a in hide:
         if a==True:
@@ -101,6 +103,5 @@ hideturtle()
 tracer(False)
 onscreenclick(tap)
 draw()
-end()
 done()
 print(Taps)
