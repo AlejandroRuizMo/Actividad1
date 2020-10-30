@@ -9,10 +9,11 @@ from random import *
 from turtle import *
 from freegames import path
 
+#Valor inicial de Taps
 Taps = {'Taps': 0}
 car = path('car.gif')
 #G representa el simbolo que representa las casillas, deben ser 32 si se quiere un tablero 8x8
-G = 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '%', '&', '+', '$', '?'
+G = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '%', '&', '+', '$', '?']
 #Tiles es la lista G * 2 debido a que son 64 casillas y en G solos hay 32
 #Esto también hará duplicas para que coincidan las cartas al momento de voltearlas
 tiles = list(G) * 2
@@ -45,6 +46,7 @@ def tap(x, y):
     "Update mark and hidden tiles based on tap."
     spot = index(x, y)
     mark = state['mark']
+    #Cada vez que haya un tap, se sumará a 'Taps' y al terminar el juego, se imprime
     Taps['Taps'] += 1
     
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
