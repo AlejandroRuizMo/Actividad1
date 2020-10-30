@@ -56,9 +56,12 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        #Coordenedas donde aparecera el número, el origen es la esquina inferior izquierda
+        goto(x+5,y+2)
+        #Color de letra
         color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        #Tipografía y tamaño
+        write(tiles[mark], font=('Arial', 20, 'normal'))
 
     update()
     ontimer(draw, 100)
