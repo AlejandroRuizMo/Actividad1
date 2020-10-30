@@ -9,6 +9,7 @@ from random import *
 from turtle import *
 from freegames import path
 
+Taps = {'Taps': 0}
 car = path('car.gif')
 #G representa el simbolo que representa las casillas, deben ser 32 si se quiere un tablero 8x8
 G = 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '%', '&', '+', '$', '?'
@@ -44,7 +45,8 @@ def tap(x, y):
     "Update mark and hidden tiles based on tap."
     spot = index(x, y)
     mark = state['mark']
-
+    Taps['Taps'] += 1
+    
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
     else:
@@ -87,3 +89,4 @@ tracer(False)
 onscreenclick(tap)
 draw()
 done()
+print(Taps)
